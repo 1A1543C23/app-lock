@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaozhan.yyT"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- 主界面：只管配置，跑在默认进程 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AppListActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="添加应用" />
+
+        <activity
+            android:name=".MonitorActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:label="监测日志" />
+
+        <!-- 下面这些都在 :guard 独立进程，主界面划掉也活着 -->
+        <activity
+            android:name=".LockActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:process=":guard"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.xiaozhan.yyT.lock"
+            android:theme="@style/LockTheme" />
+
+        <service
+            android:name=".LockAccessibilityService"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:process=":guard">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <service
+            android:name=".GuardForegroundService"
+            android:exported="false"
+            android:process=":guard" />
+
+        <provider
+            android:name=".ConfigProvider"
+            android:authorities="com.xiaozhan.yyT.config"
+            android:exported="false"
+            android:process=":guard" />
+
+    </application>
+</manifest>
