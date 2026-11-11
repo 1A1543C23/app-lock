@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_lock">
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/bg_key"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="取消"
+        android:textColor="#E6FFFFFF"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="72dp">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="#CCFFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="请输入密码解锁"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/bg_input"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:inputType="none"
+            android:longClickable="false"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#73FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#99FFFFFF"
+            android:textSize="13sp" />
+
+        <GridLayout
+            android:id="@+id/keypad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:visibility="gone">
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="1"
+                android:text="1"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="2"
+                android:text="2"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="3"
+                android:text="3"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="4"
+                android:text="4"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="5"
+                android:text="5"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="6"
+                android:text="6"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="7"
+                android:text="7"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="8"
+                android:text="8"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="9"
+                android:text="9"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="del"
+                android:text="删"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="0"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <Button
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/bg_key_ok"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:stateListAnimator="@null"
+                android:tag="ok"
+                android:text="✓"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+        </GridLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF1E88E5"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp"
+        android:text="添加应用"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="搜索应用名称或包名"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:singleLine="true"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp"
+        android:text="6767"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_apps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#FFE5E7EB"
+        android:dividerHeight="1px" />
+
+</LinearLayout>

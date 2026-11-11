@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF7F8FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应用锁"
+            android:textColor="#FF111827"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_perm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6767"
+            android:textColor="#FFB45309"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拦截开关"
+                    android:textColor="#FF111827"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_switch_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="6767"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/sw_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_diag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFFFF"
+            android:padding="14dp"
+            android:text=""
+            android:textColor="#FF6B7280"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:fontFamily="monospace"
+            android:text=""
+            android:textColor="#FF111827"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_set"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF1E88E5"
+            android:text="设置密码"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_random"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF374151"
+            android:text="随机生成密码"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_locked_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="已锁定的应用（0）"
+            android:textColor="#FF9CA3AF"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF0F172A"
+            android:text="添加应用"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/list_locked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FF7C3AED"
+            android:text="测试锁界面"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_monitor"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF0F766E"
+            android:text="监测日志"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
